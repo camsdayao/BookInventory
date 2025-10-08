@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,4 +21,6 @@ public class Books {
     private String author;
     private int stock;
 
+    @OneToMany()
+    private List<Orders> order;
 }
